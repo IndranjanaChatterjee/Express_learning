@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const app=express();
 const hbs=require("hbs");
+const { error } = require("console");
 
 const source=path.join(__dirname,"../files");
 const pathhb=path.join(__dirname,"../public/partials");
@@ -18,9 +19,11 @@ app.get("/",(req,res)=>
         USER:"PIU",
     });
 })
-app.get("/",(req,res)=>
+app.get("*",(req,res)=>
 {
-    res.send("<h1> Hello in home page </h1>");
+    res.render("404",{
+        errorComment:"OOps not found"
+    })
 })
 
 
