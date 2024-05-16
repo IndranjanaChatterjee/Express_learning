@@ -5,13 +5,15 @@
 body{
     min-height: 100vh;
     background-color: #151A1E;
+    color: rgb(143, 140, 140);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
 header{
   
   position: relative;
   top:0rem;
-  background-color: red;
+  
   height: 5vh;
   padding: 1rem;
 
@@ -25,14 +27,51 @@ header nav ul{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 5rem;
 
 }
 header nav ul li{
   list-style: none;
+  font-size: 2rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 section{
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  
+}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: auto;
+  position: relative;
+  
+  width: 100%;
+  height: 100%;
+}
+.write{
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+
+}
+.write h1{
+  font-size: 7rem;
+}
+.write p{
+  font-size: 2.5rem;
+  text-align: center;
+  z-index: 999;
 }
 .tunes{
   position: absolute;
@@ -49,9 +88,37 @@ section{
 }
 .music{
   position: absolute;
-  top:3rem;
-  left:10rem;
-  opacity: 0.2;
+  top:10%;
+  left:30%;
+  opacity: 0.1;
   color: #151A1E;
-  transform: rotateX(50%);
+  rotate: -50deg;
+}
+.man{
+  width: 20%;
+  position: absolute;
+  right: 0rem;
+  z-index: 0;
+  top:20.8%;
+ 
+
+  
+}
+button{
+  background:linear-gradient(to right,#86B2B8,#4C6F74);
+  color:black;
+  border: none;
+  outline: none;
+  width: 10rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  border-radius: 3rem;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+ 
+
+}
+button:hover{
+  cursor: pointer;
+  border-radius: 0rem;
 }
